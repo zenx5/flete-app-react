@@ -52,10 +52,12 @@ export function getAuctions(){
     return async (dispatch) => {
         dispatch(slice.actions.startLoading())
         try{
+            console.log('getAuction')
             const response = await AuctionService.fetch()
             console.log(response)
             dispatch(slice.actions.getAuctionsSuccess(response))
         }catch( error ) {
+            console.log(error)
             dispatch(slice.actions.hasError(error))
         }
     }

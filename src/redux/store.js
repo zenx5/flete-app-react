@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import { useDispatch as useAppDispatch, useSelector as useAppSelector } from 'react-redux';
 import { persistStore, persistReducer } from 'redux-persist';
-import auctionReducer from './slices/auctionn';
+import auctionReducer from './slices/auction';
 // import rootReducer, { rootPersistConfig } from './rootReducer';
 
 // ----------------------------------------------------------------------

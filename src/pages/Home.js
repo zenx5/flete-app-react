@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { Banner, SliderMain } from '../Sections'
+import { Banner, SliderMain } from '../sections'
 
 export default function Home() {
 

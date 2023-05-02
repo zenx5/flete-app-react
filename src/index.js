@@ -6,11 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import RouterProvider from './pages/RouterProvider';
 import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
+import { Provider as ProviderRedux } from 'react-redux';
+import { store } from './redux/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider />
+    <ProviderRedux store={store}>
+      <RouterProvider />
+    </ProviderRedux>
   </React.StrictMode>
 );
 
