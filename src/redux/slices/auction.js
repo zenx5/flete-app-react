@@ -13,6 +13,14 @@ const slice = createSlice({
     name:'auction',
     initialState,
     reducers:{
+        // RESET ALL
+        restartInitialState(state) {
+            state.isLoading=false
+            state.error=null
+            state.auction=null
+            state.auctions=[]
+            state.createAuction=null
+        },
         // START LOADING
         startLoading(state) {
             state.isLoading = true
@@ -47,6 +55,12 @@ const slice = createSlice({
 })
 
 export default slice.reducer
+
+export function restart(){
+    return async (dispatch) => {
+        dispatch(slice.actions.restartInitialState())
+    }
+}
 
 export function getAuctions(){
     return async (dispatch) => {
