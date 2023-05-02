@@ -1,7 +1,9 @@
 import Home from "./Home";
-import List from "./List";
+import Fletes from "./Fletes";
+import FleteDetails from "./FleteDetails";
 
 export const routes = [
     { path:'/', element:<Home/> },
-    { path:'/list', element:<List/> }
+    { path:'/fletes', element:<Fletes/> },
+    { path:'/fletes/:id', element:<FleteDetails/> },
 ]
