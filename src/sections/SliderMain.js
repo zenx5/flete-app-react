@@ -6,12 +6,13 @@ export default function SliderMain ( props ) {
     const { sx } = props
     const items = [
         {
+            id:1,
             image: banner1,
             title: <Typography variant='h3' sx={{fontSize:'4rem'}}>Somos el puente para <b>Transportistas y Clientes</b></Typography>,
             description: <Typography>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</Typography>,
             actions:[
-                <Button>Eres Transportista</Button>,
-                <Button>Cotizar un viaje con Nosotros</Button>
+                <Button key='btn-1'>Eres Transportista</Button>,
+                <Button key='btn-2'>Cotizar un viaje con Nosotros</Button>
             ]
         }
     ]
@@ -27,10 +28,12 @@ export default function SliderMain ( props ) {
 
     return <Box>
         <Slider {...settings}>
-            { items.map( item => <Box sx={{
-                backgroundImage:`url(${item.image})`,
-                ...internalSx,
-                ...sx
+            { items.map( item => <Box
+                key={item.id}
+                sx={{
+                    backgroundImage:`url(${item.image})`,
+                    ...internalSx,
+                    ...sx
             }}>
                 <Box className='content'>
                     {item.title}
