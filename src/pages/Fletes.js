@@ -18,10 +18,6 @@ export default function Fletes () {
         }
     },[dispatch])
 
-    const handlerClickFlete = (id) => () => {
-        navigate(`/fletes/${id}`)
-    }
-
     return(<Box>
         <Banner />
         <Box>
@@ -44,7 +40,7 @@ export default function Fletes () {
                                 <Typography className='current_price'>{auction.current_price}</Typography>
                             </span>
                             <Typography>Bids: {auction.bids.length}</Typography>
-                            <Button variant='contained' onClick={handlerClickFlete(auction.id)}>Ofertar</Button>
+                            <Button variant='contained' href={`/fletes/${auction.id}`}>Ofertar</Button>
                         </Grid>
                     </Grid>
                 </ListItem> )}
