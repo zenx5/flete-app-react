@@ -12,9 +12,9 @@ export default function Banner () {
             <img src={logo} height={80} width={250} />
         </Box>
         <Box className='barnav-section'>
-            <Button>Home</Button>
+            <Button href='/'>Home</Button>
             <Button>Sobre Nosotros</Button>
-            <Button>Fletes</Button>
+            <Button href='/fletes'>Fletes</Button>
         </Box>
         <Box className='user-section'>
             <Button startIcon={<PersonOutline />}>Iniciar Session</Button>
